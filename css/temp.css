@@ -1,0 +1,322 @@
+:root {
+    --main__color: #e50914;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: black;
+}
+
+.netflix {
+    background-image: url('https://i.ibb.co/vXqDmnh/background.jpg');
+    background: no-repeat center cover;
+    height: 100vh;
+}
+
+.netflix::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+nav {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+}
+
+nav .netflix__logo {
+    width: 200px;
+    margin: auto;
+
+}
+
+nav .netflix__btn {
+    background-color: var(--main__color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 20px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    text-transform: capitalize;
+    font-size: 17px;
+    cursor: pointer;
+    margin: left;
+}
+
+.netflix__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+.netflix__title {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.netflix__desc {
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.netflix__link,
+.cancel__link,
+.watch__link,
+.price__link {
+    color: white;
+    text-decoration: none;
+    background-color: var(--main__color);
+    padding: 15px 30px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.tab {
+    background-color: #141414;
+    border-bottom: 3px solid #3d3d3d;
+    text-align: center;
+    padding: 30px;
+    padding-bottom: 3px;
+}
+
+.tab .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.tab__link {
+    text-decoration: none;
+    color: #777;
+}
+
+.tab__link:hover {
+    color: white;
+
+}
+
+.tab__icon {
+    margin-bottom: 10px;
+}
+
+.tab__desc {
+    margin-bottom: 15px;
+}
+
+.tab__body--color {
+    border-bottom: 3px solid var(--main__color);
+}
+
+.cancel .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.cancel__desc {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.cancel__image img {
+    width: 600px;
+}
+
+@media (max-width:768px) {
+    .cancel .container {
+        display: block;
+        margin-top: 30px;
+    }
+
+    .cancel__image img {
+        width: 400px;
+        margin-top: 10px;
+    }
+
+    nav .netflix__logo {
+        width: 170px;
+    }
+
+
+
+}
+
+.footer {
+    margin-top: 80px;
+}
+
+.footer,
+.footer a {
+    color: #999;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+.footer p {
+    margin-bottom: 20px;
+}
+
+.footer__cols {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.footer__cols ul {
+    list-style: none;
+}
+
+.footer li {
+    line-height: 1.9;
+}
+
+.watch__info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.watch__title {
+    color: white;
+    font-size: 23px;
+}
+
+.watch__devices {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 50px;
+    color: white;
+    text-align: center;
+}
+
+@media (max-width:768px) {
+    .watch__info {
+        display: block;
+        text-align: center;
+    }
+
+    .watch__title {
+        margin-bottom: 30px;
+    }
+
+    .watch__devices {
+        display: block;
+    }
+
+}
+
+.device__image {
+    width: 400px;
+    margin-bottom: 15px;
+}
+
+.device__title {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.device__desc {
+    font-size: 17px;
+    color: #777;
+}
+
+.price__info {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.price__title {
+    margin-bottom: 15px;
+}
+
+
+.table {
+    color: white;
+    width: 100%;
+    margin-top: 30px;
+    border-spacing: 0;
+}
+
+.table thead th {
+    text-transform: uppercase;
+    padding: 15px;
+}
+
+
+.table tbody tr td {
+    color: #999;
+    padding: 15px 30px;
+    text-align: center;
+}
+
+.table tbody tr td:first-child {
+    text-align: left;
+}
+
+.table tbody tr:nth-child(odd) {
+    background: #222;
+}
